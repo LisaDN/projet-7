@@ -1,0 +1,21 @@
+._Header {
+  position: absolute;
+  width: 1240px;
+  height: 68px;
+  left: 100px;
+  top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+._Nav {
+  gap: 50px;
+}
+
+._Nav a {
+  text-decoration: none;
+  color: #ff6060;
+}
+._Nav a:hover {
+  text-decoration-line: underline;
+}

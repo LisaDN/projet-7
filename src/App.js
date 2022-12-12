@@ -1,10 +1,10 @@
 // import logo from "./logo.svg";
 import "./styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import AccomodationSheet from "./pages/AccomodationSheet/AccomodationSheet";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import AccomodationSheet from "./pages/AccomodationSheet";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
