@@ -1,5 +1,3 @@
-// import logo from "./logo.svg";
-import "./styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,9 +10,10 @@ function App() {
       <Routes>
         {/* mise en place des routes */}
         <Route path="/" element={<Home />} />
-        <Route path="A-Propos" element={<About />} />
-        <Route path="Fiche-Logement" element={<AccomodationSheet />} />
-        <Route path="404" element={<ErrorPage />} />
+        <Route path="About" element={<About />} />
+        <Route path="Accomodation" element={<AccomodationSheet />} />
+        {/* path=* si chemin ne correspond pas au chemin déclaré au dessus envoie vers la page d'erreur */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
