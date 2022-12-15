@@ -1,0 +1,27 @@
+/*banniere*/
+
+.banner {
+  position: relative;
+  border-radius: 25px;
+  height: 223px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.banner_txt {
+  color: #ffffff;
+  position: absolute;
+  font-size: 48px;
+
+  width: 100%;
+  text-align: center;
+}
+
+.img_banner {
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  position: absolute;
+  /*filtre noir transparent*/
+  filter: brightness(0.6);
+}

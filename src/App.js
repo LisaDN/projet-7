@@ -10,8 +10,8 @@ function App() {
       <Routes>
         {/* mise en place des routes */}
         <Route path="/" element={<Home />} />
-        <Route path="About" element={<About />} />
-        <Route path="Accomodation" element={<AccomodationSheet />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/accomodation/:id" element={<AccomodationSheet />} />
         {/* path=* si chemin ne correspond pas au chemin déclaré au dessus envoie vers la page d'erreur */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>

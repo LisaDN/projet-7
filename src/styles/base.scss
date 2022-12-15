@@ -1,22 +1,19 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Montserrat:wght@200;300;400&family=Roboto:wght@100;400&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Montserrat:wght@200;300;400&family=Roboto:wght@100;400&family=Shrikhand&display=swap");
 * {
-    font-family:"Montserrat", "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-     /*wrapper Page*/
-.D_Home {
-  position: relative;
-  width: 1440px;
-  height: 1024px;
-  background: #ffffff;
-  margin: 0 auto;
-}
+  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+
+  /*wrapper Page*/
+  #root {
+    width: 100%;
+    max-width: 1240px;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 0;
   }
-  
+}

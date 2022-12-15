@@ -1,24 +1,21 @@
 ._Header {
-  position: absolute;
-  width: 1240px;
-  height: 68px;
-  left: 100px;
-  top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-/*Navigation*/
+  margin-top: 40px;
+
+  /*Navigation*/
   ._Nav {
     display: flex;
     gap: 50px;
-    list-style-type: none;
+
     a {
       text-decoration: none;
       color: #ff6060;
     }
-    
+
+    .nav-active {
+      text-decoration-line: underline;
+    }
   }
 }
-
-

@@ -1,7 +1,10 @@
-export default function Banner() {
+import React from "react";
+
+export default function Banner({ BannerImg }) {
   return (
-    <div className="Mask">
-      <h1>Chez vous, partout et ailleurs</h1>
+    <div className="banner">
+      <img src={BannerImg} className="img_banner" alt="banner_img" />
+      <h1 className="banner_txt">Chez vous, partout et ailleurs</h1>
     </div>
   );
 }
