@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import BannerImg from "../assets/IMG.jpg";
 import accommodationsList from "../datas/accommodationList.json";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [accommodations, setAccomodations] = useState([]);
@@ -16,10 +17,15 @@ export default function Home() {
       <Header />
       <Banner BannerImg={BannerImg} />
       <main>
-        {accommodations.map((accommodation) => (
-          <Card accomodation={accommodation} />
-        ))}
+        <div className="wrapper card">
+          {accommodations.map((accommodation) => (
+            <Card key={accommodation.id} accomodation={accommodation} />
+          ))}
+        </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

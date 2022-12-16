@@ -1,0 +1,19 @@
+footer {
+  background: black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  .footer-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+      width: 55px;
+    }
+    p {
+      color: white;
+      font-size: 12px;
+    }
+  }
+}
