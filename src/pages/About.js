@@ -4,6 +4,7 @@ export default function About() {
   return (
     <div>
       <Header />
+      <h1>about</h1>
     </div>
   );
 }
