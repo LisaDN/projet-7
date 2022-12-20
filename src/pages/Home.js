@@ -7,11 +7,12 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const [accommodations, setAccomodations] = useState([]);
+  const [accommodations, setAccommodations] = useState([]);
 
   useEffect(() => {
-    setAccomodations(accommodationsList);
+    setAccommodations(accommodationsList);
   });
+
   return (
     <div>
       <Header />
@@ -19,7 +20,7 @@ export default function Home() {
       <main>
         <div className="wrapper card">
           {accommodations.map((accommodation) => (
-            <Card key={accommodation.id} accomodation={accommodation} />
+            <Card key={accommodation.id} accommodation={accommodation} />
           ))}
         </div>
       </main>

@@ -5,7 +5,8 @@ export default function Footer() {
     <div className="footer-flex wrapper">
       <img src={logoFooter} alt="logo kasa" />
       <p>
-        <i class="fa-regular fa-copyright"></i> 2020 Kasa. All rigths reserved
+        {/* <i className="fa-regular fa-copyright"></i> */}2020 Kasa. All rigths
+        reserved
       </p>
     </div>
   );
