@@ -8,5 +8,26 @@
   img {
     width: 100%;
     height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+}
+.accommodationLocation {
+  margin-top: 30px;
+  color: #ff6060;
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .accommodationHost {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      border-radius: 100px;
+      width: 64px;
+      height: 64px;
+    }
   }
 }

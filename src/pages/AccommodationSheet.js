@@ -8,26 +8,30 @@ export default function AccommodationSheet() {
   // récupération id dans l'url
   const { id } = useParams();
   console.log(id);
+  const accommodation = accommodationList.find(
+    (accommodationData) => accommodationData.id === id
+  );
+  console.log(accommodation);
+  // const [accommodationD, setAccommodations] = useState({ accommodation });
 
-  const [carroussel, setCarroussel] = useState([]);
-  console.log(carroussel.tags);
-
-  useEffect(() => {
-    setCarroussel(accommodationList);
-  });
   return (
-    <div>
+    <div key={accommodation.id}>
       <Header />
-      <div className="wrapper">
-        <div className="carroussel">
-          {carroussel.map((carroussel) => (
-            <img key={carroussel.id} src={carroussel.pictures} alt="" />
-          ))}
+      <main>
+        <div className="wrapper">
+          <div className="carroussel">
+            <img src={accommodation.cover} alt="" />
+          </div>
+          <section className="accommodationLocation">
+            <h1>{accommodation.title}</h1>
+            <h2>{accommodation.location}</h2>
+            <div className="accommodationHost">
+              <p>{accommodation.host.name}</p>
+              <img src={accommodation.host.picture} alt="" />
+            </div>
+          </section>
         </div>
-        <h1>TITLE LOGEMENT</h1>
-        <h2>location logement</h2>
-        <div>tags</div>
-      </div>
+      </main>
     </div>
   );
 }
