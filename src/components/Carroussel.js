@@ -8,7 +8,7 @@ export default function Carroussel({ pictures }) {
 
   // fonctions pour les flèches
   const clickNext = () => {
-    const lastSlide = count === -1;
+    const lastSlide = count === pictures.length - 1;
     const newSlide = lastSlide ? 0 : count + 1;
     setCount(newSlide);
   };
@@ -19,7 +19,7 @@ export default function Carroussel({ pictures }) {
   };
   return (
     <div className="carroussel">
-      <img src={pictures[0]} alt="" />
+      <img src={pictures[count]} alt="" />
 
       <div className="arrows">
         <button type="button" onClick={clickPrevious}>
