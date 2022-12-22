@@ -11,6 +11,21 @@ footer {
     img {
       width: 60px;
     }
+    .copyright {
+      display: flex;
+      align-items: center;
+    }
+    .copyright_c {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 100px;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+    }
     p {
       color: white;
       font-size: 18px;
