@@ -1,12 +1,15 @@
-export default function Collapse() {
+import { useEffect, useState } from "react";
+
+export default function Collapse({ accommodation }) {
+  const [collapseOpen, setCollapseOpen] = useState(false);
+  const to = () => {
+    setCollapseOpen(true);
+  };
+
   return (
-    <div className="displayCenter">
-      <button type="button" className="collapse_button">
-        TITLE
-      </button>
-      <div className="collapse_content">
-        <p></p>
-      </div>
+    <div className="collapse">
+      <button type="button" className="collapse_button" onClick={to}></button>
+      <div className="collapse_content"></div>
     </div>
   );
 }

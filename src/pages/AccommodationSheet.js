@@ -4,6 +4,8 @@ import accommodationList from "../datas/accommodationList.json";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Carroussel from "../components/Carroussel";
+import Rating from "../components/Rating";
+import Collapse from "../components/Collapse";
 
 export default function AccommodationSheet() {
   // récupération id dans l'url
@@ -23,22 +25,28 @@ export default function AccommodationSheet() {
           <Carroussel pictures={accommodation.pictures} />
 
           <section className="accommodationLocation">
-            <h1>{accommodation.title}</h1>
-            <h2>{accommodation.location}</h2>
-            <div className="accommodationHost">
+            <div className="accommodationName">
               <div>
-                <p>{accommodation.host.name.split(" ")[0]}</p>
-                <br />
-                <p>{accommodation.host.name.split(" ")[1]}</p>
+                <h1>{accommodation.title}</h1>
+                <h2>{accommodation.location}</h2>
               </div>
-              <img src={accommodation.host.picture} alt="" />
+              <div className="accommodationHost">
+                <p>{accommodation.host.name}</p>
+
+                <img src={accommodation.host.picture} alt="" />
+              </div>
             </div>
             <div className="tagsAndNotation">
               <ul>
-                <li>{accommodation.tags}</li>
+                {accommodation.tags.map((accommodationTags) => (
+                  <li>{accommodationTags}</li>
+                ))}
               </ul>
-              <div className="ratings">stars</div>
+              <Rating key={accommodation.id} rating={accommodation.rating} />
             </div>
+          </section>
+          <section className="collapse">
+            <Collapse collapse={accommodation} />
           </section>
         </div>
       </main>

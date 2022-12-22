@@ -43,12 +43,48 @@
   }
   .accommodationHost {
     display: flex;
-    justify-content: flex-end;
+
     img {
       border-radius: 100px;
       width: 64px;
       height: 64px;
       object-fit: cover;
+    }
+    p {
+      width: min-content;
+      margin-right: 10px;
+      text-align: end;
+      font-size: 18px;
+    }
+  }
+}
+.countSlides {
+  position: absolute;
+  font-size: 45px;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  bottom: 25px;
+  width: 100%;
+  color: #fff;
+}
+.accommodationName {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tagsAndNotation {
+  display: flex;
+  color: white;
+  ul {
+    display: flex;
+
+    li {
+      border-radius: 10px;
+      background: #ff6060;
+      margin-right: 5px;
+      padding: 5px 30px;
     }
   }
 }

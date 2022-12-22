@@ -1,20 +1,27 @@
 .collapse_button {
   background: #ff6060;
-  width: 1023px;
-  height: 47px;
+  color: white;
+  width: 582px;
+  height: 52px;
   cursor: pointer;
   border: none;
   margin-top: 31px;
+  border-radius: 10px;
 }
 
 .collapse_content {
-  padding: 0 60px;
-  display: none;
+  width: 582px;
+  padding: 149px;
   overflow: hidden;
+  transition: padding 0.2s ease-out;
   background: #f7f7f7;
-  color: #ff6060;
+  border-radius: 10px;
 }
-.displayCenter {
-  display: flex;
-  justify-content: center;
+.collapse {
+  max-height: 500px;
+  transition: max-height 0.2s;
+}
+
+.activeCollapse {
+  background-color: #ff6060;
 }
