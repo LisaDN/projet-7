@@ -3,7 +3,11 @@ import { useEffect, useState } from "react";
 export default function Collapse(accommodationCollapse) {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const toggle = () => {
-    setCollapseOpen(true);
+    if (!collapseOpen) {
+      setCollapseOpen(true);
+    } else {
+      setCollapseOpen();
+    }
   };
 
   return (
