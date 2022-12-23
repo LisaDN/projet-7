@@ -9,12 +9,16 @@ export default function About() {
       <Header />
       <Banner BannerImg={BannerAboutImg} />
       <main>
-        <div className="wrapper">
-          <Collapse />
-          <Collapse />
-          <Collapse />
-          <Collapse />
-        </div>
+        <section className="collapseAboutPage">
+          <Collapse
+            className="collapse_content_accommodation"
+            collapseTitle="Fiabilité"
+            collapseInfo=""
+          />
+          <Collapse collapseTitle="Respect" collapseInfo="" />
+          <Collapse collapseTitle="Service" collapseInfo="" />
+          <Collapse collapseTitle="Responsabilité" collapseInfo="" />
+        </section>
       </main>
     </div>
   );

@@ -7,9 +7,9 @@ export default function Rating({ rating }) {
 
   return (
     <div>
-      {starsRating.map(() => {
-        <img src={stars} alt="" />;
-      })}
+      {/* {starsRating.rating.map(() => {
+        <img src={starsRating} alt="" />;
+      })} */}
     </div>
   );
 }

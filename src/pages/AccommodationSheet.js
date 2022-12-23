@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Carroussel from "../components/Carroussel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
 
 export default function AccommodationSheet() {
   // récupération id dans l'url
@@ -42,14 +43,24 @@ export default function AccommodationSheet() {
                   <li>{accommodationTags}</li>
                 ))}
               </ul>
-              <Rating key={accommodation.id} rating={accommodation.rating} />
+              <Rating rating={accommodation} />
             </div>
           </section>
-          <section className="collapse">
-            <Collapse collapse={accommodation} />
+          <section className="collapseAccommodationPage">
+            <Collapse
+              collapseTitle="Description"
+              collapseInfo={accommodation.description}
+            />
+            <Collapse
+              collapseTitle="Equipements"
+              collapseInfo={accommodation.equipments}
+            />
           </section>
         </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
