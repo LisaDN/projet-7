@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import accommodationList from "../datas/accommodationList.json";
 
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+
 import Carroussel from "../components/Carroussel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
@@ -16,7 +16,6 @@ export default function AccommodationSheet() {
     (accommodationData) => accommodationData.id === id
   );
   console.log(accommodation);
-  // const [accommodationD, setAccommodations] = useState({ accommodation });
 
   return (
     <div key={accommodation.id}>
@@ -40,21 +39,31 @@ export default function AccommodationSheet() {
             <div className="tagsAndNotation">
               <ul>
                 {accommodation.tags.map((accommodationTags) => (
-                  <li>{accommodationTags}</li>
+                  <li key={accommodationTags.id}>{accommodationTags}</li>
                 ))}
               </ul>
-              <Rating rating={accommodation} />
+              <Rating rating={accommodation.rating} />
             </div>
           </section>
-          <section className="collapseAccommodationPage">
-            <Collapse
-              collapseTitle="Description"
-              collapseInfo={accommodation.description}
-            />
-            <Collapse
-              collapseTitle="Equipements"
-              collapseInfo={accommodation.equipments}
-            />
+          <section>
+            <div className="wrapper collapseAccommodationPage">
+              <Collapse
+                collapseTitle="Description"
+                collapseInfo={accommodation.description}
+              />
+              <Collapse
+                collapseTitle="Equipements"
+                collapseInfo={accommodation.equipments.map(
+                  (accommodationEquipments) => (
+                    <ul>
+                      <li key={accommodationEquipments.id}>
+                        {accommodationEquipments}
+                      </li>
+                    </ul>
+                  )
+                )}
+              />
+            </div>
           </section>
         </div>
       </main>

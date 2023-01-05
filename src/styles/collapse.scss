@@ -7,12 +7,17 @@
   border: none;
   margin-top: 31px;
   border-radius: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .toggle {
   padding: 30px 15px 15px 15px;
   height: 100%;
-  overflow: hidden;
   transition: padding 0.2s ease-out;
   background: #f7f7f7;
   border-radius: 0 0 10px 10px;
@@ -20,6 +25,8 @@
 .collapse {
   max-height: 500px;
   transition: max-height 0.2s;
+  font-size: 18px;
+  width: 100%;
 }
 
 .activeCollapse {

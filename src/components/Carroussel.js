@@ -4,7 +4,8 @@ import arrowLeft from "../assets/chevron-gauche.png";
 
 export default function Carroussel({ pictures }) {
   const [slide, setSlide] = useState(0);
-  console.log(slide);
+
+  // console.log(slide);
 
   // fonctions pour les flèches
   const clickNext = () => {
@@ -17,6 +18,7 @@ export default function Carroussel({ pictures }) {
     const newSlide = firstSlide ? pictures.length - 1 : slide - 1;
     setSlide(newSlide);
   };
+
   return (
     <div className="carroussel">
       <img src={pictures[slide]} alt="" />

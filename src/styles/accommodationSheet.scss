@@ -77,6 +77,8 @@
 .tagsAndNotation {
   display: flex;
   color: white;
+  justify-content: space-between;
+  align-items: center;
   ul {
     display: flex;
 
@@ -91,12 +93,5 @@
 
 .collapseAccommodationPage {
   display: flex;
-  justify-content: center;
   gap: 50px;
-  :nth-child(1) {
-    width: 582px;
-  }
-  :nth-child(2) {
-    width: 582px;
-  }
 }

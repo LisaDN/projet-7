@@ -1,15 +1,21 @@
-import { useEffect, useState } from "react";
-import stars from "../assets/stars.png";
+import starOrange from "../assets/starOrange.png";
+import starGrey from "../assets/starGrey.png";
 
 export default function Rating({ rating }) {
-  const [starsRating, setStarRating] = useState([5]);
-  console.log(starsRating);
+  const starRating = [];
+  let starEmpty = true;
+  console.log(rating);
 
-  return (
-    <div>
-      {/* {starsRating.rating.map(() => {
-        <img src={starsRating} alt="" />;
-      })} */}
-    </div>
-  );
+  for (let i = 0; i < 5; i++) {
+    if (i === parseInt(rating)) {
+      starEmpty = false;
+    }
+    if (starEmpty === true) {
+      starRating.push(<img key={i} src={starOrange} alt="" />);
+    } else {
+      starRating.push(<img key={i} src={starGrey} alt="" />);
+    }
+  }
+
+  return <div className="starsRating">{starRating}</div>;
 }

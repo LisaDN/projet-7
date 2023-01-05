@@ -10,14 +10,19 @@ export default function About() {
       <Banner BannerImg={BannerAboutImg} />
       <main>
         <section className="collapseAboutPage">
-          <Collapse
-            className="collapse_content_accommodation"
-            collapseTitle="Fiabilité"
-            collapseInfo=""
-          />
-          <Collapse collapseTitle="Respect" collapseInfo="" />
-          <Collapse collapseTitle="Service" collapseInfo="" />
-          <Collapse collapseTitle="Responsabilité" collapseInfo="" />
+          <div className="wrapper collapseWidthAbout">
+            <Collapse
+              className="collapse_content_accommodation"
+              collapseTitle="Fiabilité"
+              collapseInfo=""
+            />
+            <Collapse
+              collapseTitle="Respect"
+              collapseInfo="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+            />
+            <Collapse collapseTitle="Service" collapseInfo="" />
+            <Collapse collapseTitle="Responsabilité" collapseInfo="" />
+          </div>
         </section>
       </main>
     </div>

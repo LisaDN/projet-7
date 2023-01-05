@@ -16,7 +16,10 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Banner BannerImg={BannerImg} />
+      <Banner
+        BannerImg={BannerImg}
+        BannerTitle="  Chez vous, partout et ailleurs"
+      />
       <main>
         <div className="wrapper card">
           {accommodations.map((accommodation) => (
