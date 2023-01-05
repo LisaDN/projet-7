@@ -4,7 +4,7 @@ import arrowLeft from "../assets/chevron-gauche.png";
 
 export default function Carroussel({ pictures }) {
   const [slide, setSlide] = useState(0);
-
+  const currentSlide = pictures[slide];
   // console.log(slide);
 
   // fonctions pour les flèches
@@ -18,10 +18,15 @@ export default function Carroussel({ pictures }) {
     const newSlide = firstSlide ? pictures.length - 1 : slide - 1;
     setSlide(newSlide);
   };
-
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlide((slide + 1) % pictures.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [slide, pictures]);
   return (
     <div className="carroussel">
-      <img src={pictures[slide]} alt="" />
+      <img src={[currentSlide]} alt="" />
 
       <div className="arrows">
         <button type="button" onClick={clickPrevious}>
