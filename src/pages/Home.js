@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     setAccommodations(accommodationsList);
-  });
+  }, [setAccommodations]);
 
   return (
     <div>
