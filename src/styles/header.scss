@@ -50,3 +50,11 @@
     margin-right: 5px;
   }
 }
+@media only screen and (max-width: 255px) {
+  ._Header {
+    justify-content: center;
+  }
+  ._Nav li {
+    margin-top: 15px;
+  }
+}
