@@ -25,24 +25,26 @@ export default function AccommodationSheet() {
           <Carroussel pictures={accommodation.pictures} />
 
           <section className="accommodationLocation">
-            <div className="accommodationName">
-              <div>
+            <div className="flexAccommodationTitle">
+              <div className="accommodationName">
                 <h1>{accommodation.title}</h1>
                 <h2>{accommodation.location}</h2>
-              </div>
-              <div className="accommodationHost">
-                <p>{accommodation.host.name}</p>
 
-                <img src={accommodation.host.picture} alt="" />
+                <div className="tagsAndNotation">
+                  <ul>
+                    {accommodation.tags.map((accommodationTags) => (
+                      <li key={accommodationTags.id}>{accommodationTags}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="tagsAndNotation">
-              <ul>
-                {accommodation.tags.map((accommodationTags) => (
-                  <li key={accommodationTags.id}>{accommodationTags}</li>
-                ))}
-              </ul>
-              <Rating rating={accommodation.rating} />
+              <div className="flexAccommodationHost">
+                <div className="accommodationHost">
+                  <p>{accommodation.host.name}</p>
+                  <img src={accommodation.host.picture} alt="" />
+                </div>
+                <Rating rating={accommodation.rating} />
+              </div>
             </div>
           </section>
           <section>

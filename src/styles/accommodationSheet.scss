@@ -1,7 +1,7 @@
 .carroussel {
   margin-top: 25px;
 
-  width: 1240px;
+  width: 100%;
   height: 415px;
   border-radius: 25px;
   position: relative;
@@ -37,6 +37,7 @@
   color: #ff6060;
   h1 {
     font-size: 30px;
+    margin-right: 15px;
   }
   h2 {
     font-size: 18px;
@@ -69,8 +70,6 @@
   color: #fff;
 }
 .accommodationName {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -79,9 +78,11 @@
   color: white;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
   ul {
     display: flex;
-
+    align-items: center;
+    flex-wrap: wrap;
     li {
       border-radius: 10px;
       background: #ff6060;
@@ -94,4 +95,64 @@
 .collapseAccommodationPage {
   display: flex;
   gap: 50px;
+}
+.flexAccommodationHost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.flexAccommodationTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+  .flexAccommodationTitle {
+    display: block;
+  }
+  .carroussel .arrows button img {
+    width: 20px;
+  }
+  .flexAccommodationHost {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .collapseAccommodationPage {
+    flex-direction: column;
+  }
+  .carroussel {
+    height: 255px;
+  }
+  .arrowCollapse {
+    width: 15px;
+  }
+
+  .tagsAndNotation ul li {
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  .starsRating img {
+    height: 15px;
+    width: 15px;
+  }
+
+  .accommodationLocation .accommodationHost img {
+    height: 42px;
+    width: 42px;
+  }
+  .accommodationLocation .accommodationHost p {
+    font-size: 14px;
+  }
+  .accommodationLocation h1 {
+    font-size: 20px;
+  }
+  .accommodationLocation h2 {
+    font-size: 14px;
+  }
+  .collapseAccommodationPage {
+    gap: 0;
+  }
 }

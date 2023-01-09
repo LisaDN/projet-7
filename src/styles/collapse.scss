@@ -21,6 +21,9 @@
   transition: padding 0.2s ease-out;
   background: #f7f7f7;
   border-radius: 0 0 10px 10px;
+  p {
+    color: #ff6060;
+  }
 }
 .collapse {
   max-height: 500px;
@@ -31,4 +34,15 @@
 
 .activeCollapse {
   background-color: #ff6060;
+}
+
+@media screen and (max-width: 700px) {
+  .collapse {
+    font-size: 14px;
+  }
+  .collapse_button {
+    border-radius: 5px;
+    height: 29px;
+    font-size: 14px;
+  }
 }

@@ -15,6 +15,15 @@ footer {
     p {
       color: white;
       font-size: 18px;
+      text-align: center;
     }
+  }
+}
+@media screen and (max-width: 700px) {
+  footer .footer-flex p {
+    font-size: 12px;
+  }
+  footer .footer-flex img {
+    font-size: 12px;
   }
 }

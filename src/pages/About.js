@@ -2,10 +2,11 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import BannerAboutImg from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg";
 import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <div className="wrapper">
+    <div>
       <Header />
       <Banner BannerImg={BannerAboutImg} />
       <main>
@@ -31,6 +32,9 @@ export default function About() {
           </div>
         </section>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
