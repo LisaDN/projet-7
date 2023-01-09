@@ -15,7 +15,7 @@ export default function AccommodationSheet() {
   const accommodation = accommodationList.find(
     (accommodationData) => accommodationData.id === id
   );
-  console.log(accommodation);
+  // console.log(accommodation);
 
   return (
     <div key={accommodation.id}>
