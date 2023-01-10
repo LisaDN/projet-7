@@ -24,6 +24,7 @@ export default function Carroussel({ pictures }) {
     }, 3000);
     return () => clearInterval(interval);
   }, [slide, pictures]);
+
   return (
     <div className="carroussel">
       <img src={[currentSlide]} alt="" />

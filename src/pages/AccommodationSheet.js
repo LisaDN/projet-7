@@ -32,8 +32,8 @@ export default function AccommodationSheet() {
 
                 <div className="tagsAndNotation">
                   <ul>
-                    {accommodation.tags.map((accommodationTags) => (
-                      <li key={accommodationTags.id}>{accommodationTags}</li>
+                    {accommodation.tags.map((accommodationTags, index) => (
+                      <li key={index}>{accommodationTags}</li>
                     ))}
                   </ul>
                 </div>
@@ -56,12 +56,10 @@ export default function AccommodationSheet() {
               <Collapse
                 collapseTitle="Equipements"
                 collapseInfo={accommodation.equipments.map(
-                  (accommodationEquipments) => (
-                    <ul>
-                      <li key={accommodationEquipments.id}>
-                        {accommodationEquipments}
-                      </li>
-                    </ul>
+                  (accommodationsEquipments) => (
+                    <li key={accommodationsEquipments}>
+                      {accommodationsEquipments}
+                    </li>
                   )
                 )}
               />

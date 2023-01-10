@@ -2,8 +2,13 @@ import { useState } from "react";
 import arrowsDown from "../assets/flecheBas.png";
 import arrowsTop from "../assets/flecheHaut.png";
 
-export default function Collapse(accommodationCollapse) {
+export default function Collapse({
+  collapseTitle,
+  collapseInfo,
+  collapseInfoEquipments,
+}) {
   const [collapseOpen, setCollapseOpen] = useState(false);
+
   const toggle = () => {
     //si collapse est fermé, ouvrir au clic
     if (!collapseOpen) {
@@ -17,7 +22,7 @@ export default function Collapse(accommodationCollapse) {
   return (
     <div className="collapse">
       <button type="button" className="collapse_button" onClick={toggle}>
-        {accommodationCollapse.collapseTitle}
+        {collapseTitle}
         {collapseOpen === true ? (
           <img className="arrowCollapse" src={arrowsTop} alt="" />
         ) : (
@@ -26,7 +31,7 @@ export default function Collapse(accommodationCollapse) {
       </button>
       {collapseOpen && (
         <div className="toggle">
-          <p>{accommodationCollapse.collapseInfo}</p>
+          <p>{collapseInfo}</p>
         </div>
       )}
     </div>
