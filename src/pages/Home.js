@@ -5,10 +5,20 @@ import BannerImg from "../assets/IMG.jpg";
 import accommodationsList from "../datas/accommodationList.json";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
+import Pagination from "../components/Pagination";
 
 export default function Home() {
   const [accommodations, setAccommodations] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [accommodationsPerPage] = useState(8);
+  const indexOfLastAccommodation = currentPage * accommodationsPerPage;
+  const indexOfFirstAccommodation = currentPage - accommodationsPerPage;
 
+  const currentAccommodations = accommodations.splice(
+    indexOfFirstAccommodation,
+    indexOfLastAccommodation
+  );
+  const pages = Math.ceil(accommodations.length / accommodationsPerPage);
   useEffect(() => {
     setAccommodations(accommodationsList);
   }, [setAccommodations]);
@@ -25,6 +35,11 @@ export default function Home() {
           {accommodations.map((accommodation) => (
             <Card key={accommodation.id} accommodation={accommodation} />
           ))}
+          <Pagination
+            pages={pages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       </main>
       <footer>

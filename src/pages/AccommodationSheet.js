@@ -58,7 +58,7 @@ export default function AccommodationSheet() {
                 collapseInfo={accommodation.equipments.map(
                   (accommodationEquipments) => (
                     <ul>
-                      <li key={accommodationEquipments.id}>
+                      <li key={accommodationEquipments}>
                         {accommodationEquipments}
                       </li>
                     </ul>
