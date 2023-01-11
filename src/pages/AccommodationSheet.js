@@ -7,15 +7,22 @@ import Carroussel from "../components/Carroussel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 export default function AccommodationSheet() {
   // récupération id dans l'url
   const { id } = useParams();
+  console.log(accommodationList);
   console.log(id);
-  const accommodation = accommodationList.find(
+  const post = accommodationList.find(
     (accommodationData) => accommodationData.id === id
   );
-  // console.log(accommodation);
+  const [accommodation, setAccommodation] = useState();
+  useEffect(() => {
+    setAccommodation(post);
+  }, [setAccommodation]);
+
+  console.log(post);
 
   return (
     <div key={accommodation.id}>

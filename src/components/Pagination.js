@@ -1,14 +1,24 @@
 import React from "react";
 
-export default function Pagination({ pages, currentPage, setCurrentPage }) {
-  const pageNumbers = [...Array(pages + 1).keys()].splice(1);
+export default function Pagination({
+  accommodationsPerPage,
+  currentPage,
+  setCurrentPage,
+  totalPosts,
+}) {
+  const pageNumbers = [...Array(accommodationsPerPage + 1).keys()].splice(1);
+  console.log(accommodationsPerPage, currentPage);
+
+  const pages = Math.ceil(totalPosts / accommodationsPerPage);
   return (
     <ul>
-      {pageNumbers.map((pageN) => (
+      {/* {pageNumbers.map((pageN) => (
         <li key={pageN}>
-          <a onClick={() => setCurrentPage(pageN)}>{pageN}</a>
+          <a href="!#" onClick={() => setCurrentPage(pageN)}>
+            {pageN}
+          </a>
         </li>
-      ))}
+      ))} */}
     </ul>
   );
 }

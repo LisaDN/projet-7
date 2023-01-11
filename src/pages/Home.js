@@ -9,19 +9,23 @@ import Pagination from "../components/Pagination";
 
 export default function Home() {
   const [accommodations, setAccommodations] = useState([]);
+
   const [currentPage, setCurrentPage] = useState(1);
-  const [accommodationsPerPage] = useState(8);
+  const [accommodationsPerPage] = useState(7);
   const indexOfLastAccommodation = currentPage * accommodationsPerPage;
   const indexOfFirstAccommodation = currentPage - accommodationsPerPage;
+
+  useEffect(() => {
+    setAccommodations(accommodationsList);
+  }, [setAccommodations]);
 
   const currentAccommodations = accommodations.splice(
     indexOfFirstAccommodation,
     indexOfLastAccommodation
   );
-  const pages = Math.ceil(accommodations.length / accommodationsPerPage);
-  useEffect(() => {
-    setAccommodations(accommodationsList);
-  }, [setAccommodations]);
+  console.log(currentAccommodations);
+  console.log(accommodationsList);
+  // const pages = Math.ceil(accommodations.length / accommodationsPerPage);
 
   return (
     <div>
@@ -32,11 +36,12 @@ export default function Home() {
       />
       <main>
         <div className="wrapper card">
-          {accommodations.map((accommodation) => (
+          {currentAccommodations.map((accommodation) => (
             <Card key={accommodation.id} accommodation={accommodation} />
           ))}
           <Pagination
-            pages={pages}
+            accommodationsPerPage={accommodationsPerPage}
+            totalPosts={accommodations.length}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
           />
