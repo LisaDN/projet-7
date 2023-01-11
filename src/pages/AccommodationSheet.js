@@ -20,7 +20,7 @@ export default function AccommodationSheet() {
   const [accommodation, setAccommodation] = useState();
   useEffect(() => {
     setAccommodation(post);
-  }, [setAccommodation]);
+  }, []);
 
   console.log(post);
 

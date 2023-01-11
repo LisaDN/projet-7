@@ -10,6 +10,7 @@ export default function Pagination({
   console.log(accommodationsPerPage, currentPage);
 
   const pages = Math.ceil(totalPosts / accommodationsPerPage);
+  console.log(pageNumbers, pages);
   return (
     <ul>
       {/* {pageNumbers.map((pageN) => (
