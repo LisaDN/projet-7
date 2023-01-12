@@ -14,14 +14,11 @@
     max-width: 1240px;
     margin: 0 auto;
     padding: 0;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .wrapper {
-    width: 90%;
-    /*pour que le contenu ne colle pas à la bordure*/
-    font-size: 80%;
-    /*réduction taille police*/
+    @media screen and (max-width: 1280px) {
+      width: 90%;
+      /*pour que le contenu ne colle pas à la bordure*/
+      font-size: 80%;
+      /*réduction taille police*/
+    }
   }
 }

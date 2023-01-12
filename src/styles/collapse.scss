@@ -1,48 +1,40 @@
-.collapse_button {
-  background: #ff6060;
-  color: white;
-  width: 100%;
-  height: 52px;
-  cursor: pointer;
-  border: none;
-  margin-top: 31px;
-  border-radius: 10px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.toggle {
-  padding: 30px 15px 15px 15px;
-  height: 100%;
-  transition: padding 0.2s ease-out;
-  background: #f7f7f7;
-  border-radius: 0 0 10px 10px;
-  p {
-    color: #ff6060;
-  }
-}
 .collapse {
   max-height: 500px;
   transition: max-height 0.2s;
   font-size: 18px;
   width: 100%;
-}
-
-.activeCollapse {
-  background-color: #ff6060;
-}
-
-@media screen and (max-width: 700px) {
-  .collapse {
+  @media screen and (max-width: 700px) {
     font-size: 14px;
   }
   .collapse_button {
-    border-radius: 5px;
-    height: 29px;
-    font-size: 14px;
+    background: #ff6060;
+    color: white;
+    width: 100%;
+    height: 52px;
+    cursor: pointer;
+    border: none;
+    margin-top: 31px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width: 700px) {
+      border-radius: 5px;
+      height: 29px;
+      font-size: 14px;
+    }
+  }
+  .toggle {
+    padding: 30px 15px 15px 15px;
+    height: 100%;
+    transition: padding 0.2s ease-out;
+    background: #f7f7f7;
+    border-radius: 0 0 10px 10px;
+    p {
+      color: #ff6060;
+    }
   }
 }

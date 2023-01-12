@@ -2,11 +2,7 @@ import { useState } from "react";
 import arrowsDown from "../assets/flecheBas.png";
 import arrowsTop from "../assets/flecheHaut.png";
 
-export default function Collapse({
-  collapseTitle,
-  collapseInfo,
-  collapseInfoEquipments,
-}) {
+export default function Collapse({ collapseTitle, collapseInfo }) {
   const [collapseOpen, setCollapseOpen] = useState(false);
 
   const toggle = () => {
