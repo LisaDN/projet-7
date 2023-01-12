@@ -28,15 +28,20 @@ export default function Carroussel({ pictures }) {
   return (
     <div className="carroussel">
       <img src={[currentSlide]} alt={currentSlide} />
+      {/* si le carroussel contient plus d'une image : affichage div contenant boutons : next et previous sinon enlever div boutons */}
+      {pictures.length > 1 ? (
+        <div className="arrows">
+          <button type="button" onClick={clickPrevious}>
+            <img src={arrowLeft} alt="photos précédentes" />
+          </button>
+          <button type="button" onClick={clickNext}>
+            <img src={arrowRight} alt="photos suivantes" />
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
 
-      <div className="arrows">
-        <button type="button" onClick={clickPrevious}>
-          <img src={arrowLeft} alt="photos précédentes" />
-        </button>
-        <button type="button" onClick={clickNext}>
-          <img src={arrowRight} alt="photos suivantes" />
-        </button>
-      </div>
       <div className="countSlides">
         <p>
           {[slide + 1]}/{[pictures.length]}
