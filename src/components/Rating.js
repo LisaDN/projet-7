@@ -11,9 +11,9 @@ export default function Rating({ rating }) {
       starEmpty = false;
     }
     if (starEmpty === true) {
-      starRating.push(<img key={i} src={starOrange} alt="" />);
+      starRating.push(<img key={i} src={starOrange} alt="étoile orange" />);
     } else {
-      starRating.push(<img key={i} src={starGrey} alt="" />);
+      starRating.push(<img key={i} src={starGrey} alt="étoile grise" />);
     }
   }
 

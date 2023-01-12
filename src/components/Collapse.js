@@ -20,9 +20,13 @@ export default function Collapse({ collapseTitle, collapseInfo }) {
       <button type="button" className="collapse_button" onClick={toggle}>
         {collapseTitle}
         {collapseOpen === true ? (
-          <img className="arrowCollapse" src={arrowsTop} alt="" />
+          <img
+            className="arrowCollapse"
+            src={arrowsTop}
+            alt="collapse ouvert"
+          />
         ) : (
-          <img src={arrowsDown} alt="" />
+          <img src={arrowsDown} alt="collapse fermé" />
         )}
       </button>
       {collapseOpen && (

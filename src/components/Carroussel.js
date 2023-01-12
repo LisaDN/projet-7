@@ -27,14 +27,14 @@ export default function Carroussel({ pictures }) {
 
   return (
     <div className="carroussel">
-      <img src={[currentSlide]} alt="" />
+      <img src={[currentSlide]} alt={currentSlide} />
 
       <div className="arrows">
         <button type="button" onClick={clickPrevious}>
-          <img src={arrowLeft} alt="" />
+          <img src={arrowLeft} alt="photos précédentes" />
         </button>
         <button type="button" onClick={clickNext}>
-          <img src={arrowRight} alt="" />
+          <img src={arrowRight} alt="photos suivantes" />
         </button>
       </div>
       <div className="countSlides">

@@ -41,7 +41,7 @@ export default function AccommodationSheet() {
               <div className="flexAccommodationHost">
                 <div className="accommodationHost">
                   <p>{accommodation.host.name}</p>
-                  <img src={accommodation.host.picture} alt="" />
+                  <img src={accommodation.host.picture} alt="profil hôte" />
                 </div>
                 <Rating rating={accommodation.rating} />
               </div>
