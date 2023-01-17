@@ -4,10 +4,31 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
-
+  @media only screen and (max-width: 290px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .kasa-logo {
+    width: 147px;
+    @media only screen and (max-width: 470px) {
+      width: 110px;
+    }
+  }
   /*Navigation*/
   ._Nav {
     display: flex;
+
+    @media only screen and (max-width: 700px) {
+      li {
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 290px) {
+          margin-top: 15px;
+        }
+      }
+    }
+
     a {
       text-decoration: none;
       color: #ff6060;
@@ -21,40 +42,10 @@
 }
 ._Nav a:nth-child(1) {
   margin-right: 57px;
-}
-
-@media only screen and (max-width: 700px) {
-  ._Nav li {
-    font-size: 15px;
-  }
-  .kasa-logo {
-    width: 147px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  ._Nav li {
-    font-size: 15px;
-  }
-  .kasa-logo {
-    width: 127px;
-  }
-  ._Nav a:nth-child(1) {
+  @media only screen and (max-width: 470px) {
     margin-right: 27px;
   }
-}
-@media only screen and (max-width: 330px) {
-  ._Nav li {
-    font-size: 12px;
-  }
-  ._Nav a:nth-child(1) {
+  @media only screen and (max-width: 330px) {
     margin-right: 5px;
-  }
-}
-@media only screen and (max-width: 255px) {
-  ._Header {
-    justify-content: center;
-  }
-  ._Nav li {
-    margin-top: 15px;
   }
 }
