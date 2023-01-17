@@ -9,7 +9,7 @@ export default function Collapse({ collapseTitle, collapseInfo }) {
     //si collapse est fermé, ouvrir au clic
     if (!collapseOpen) {
       setCollapseOpen(true);
-      //si collapse est ouvert fermé, fermer au clic
+      //si collapse est ouvert , fermer au clic
     } else {
       setCollapseOpen();
     }

@@ -7,6 +7,7 @@ import Carroussel from "../components/Carroussel";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
+import { Navigate } from "react-router-dom";
 
 export default function AccommodationSheet() {
   // récupération id dans l'url
@@ -18,58 +19,64 @@ export default function AccommodationSheet() {
   // console.log(accommodation);
 
   return (
-    <div key={accommodation.id}>
-      <Header />
-      <main>
-        <div className="wrapper">
-          <Carroussel pictures={accommodation.pictures} />
+    <div>
+      {!accommodation ? (
+        <Navigate to="not found" />
+      ) : (
+        <div key={accommodation.id}>
+          <Header />
+          <main>
+            <div className="wrapper">
+              <Carroussel pictures={accommodation.pictures} />
 
-          <section className="accommodationLocation">
-            <div className="flexAccommodationTitle">
-              <div className="accommodationName">
-                <h1>{accommodation.title}</h1>
-                <h2>{accommodation.location}</h2>
+              <section className="accommodationLocation">
+                <div className="flexAccommodationTitle">
+                  <div className="accommodationName">
+                    <h1>{accommodation.title}</h1>
+                    <h2>{accommodation.location}</h2>
 
-                <div className="tagsAndNotation">
-                  <ul>
-                    {accommodation.tags.map((accommodationTags, index) => (
-                      <li key={index}>{accommodationTags}</li>
-                    ))}
-                  </ul>
+                    <div className="tagsAndNotation">
+                      <ul>
+                        {accommodation.tags.map((accommodationTags, index) => (
+                          <li key={index}>{accommodationTags}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="flexAccommodationHost">
+                    <div className="accommodationHost">
+                      <p>{accommodation.host.name}</p>
+                      <img src={accommodation.host.picture} alt="profil hôte" />
+                    </div>
+                    <Rating rating={accommodation.rating} />
+                  </div>
                 </div>
-              </div>
-              <div className="flexAccommodationHost">
-                <div className="accommodationHost">
-                  <p>{accommodation.host.name}</p>
-                  <img src={accommodation.host.picture} alt="profil hôte" />
+              </section>
+              <section>
+                <div className="wrapper collapseAccommodationPage">
+                  <Collapse
+                    collapseTitle="Description"
+                    collapseInfo={accommodation.description}
+                  />
+                  <Collapse
+                    collapseTitle="Equipements"
+                    collapseInfo={accommodation.equipments.map(
+                      (accommodationsEquipments) => (
+                        <li key={accommodationsEquipments}>
+                          {accommodationsEquipments}
+                        </li>
+                      )
+                    )}
+                  />
                 </div>
-                <Rating rating={accommodation.rating} />
-              </div>
+              </section>
             </div>
-          </section>
-          <section>
-            <div className="wrapper collapseAccommodationPage">
-              <Collapse
-                collapseTitle="Description"
-                collapseInfo={accommodation.description}
-              />
-              <Collapse
-                collapseTitle="Equipements"
-                collapseInfo={accommodation.equipments.map(
-                  (accommodationsEquipments) => (
-                    <li key={accommodationsEquipments}>
-                      {accommodationsEquipments}
-                    </li>
-                  )
-                )}
-              />
-            </div>
-          </section>
+          </main>
+          <footer>
+            <Footer />
+          </footer>
         </div>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+      )}
     </div>
   );
 }
