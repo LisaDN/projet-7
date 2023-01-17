@@ -1,25 +1,27 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Pagination({
   accommodationsPerPage,
-  currentPage,
-  setCurrentPage,
   totalPosts,
+  paginate,
 }) {
-  const pageNumbers = [...Array(accommodationsPerPage + 1).keys()].splice(1);
-  console.log(accommodationsPerPage, currentPage);
+  const numberOfPages = [];
 
-  const pages = Math.ceil(totalPosts / accommodationsPerPage);
-  console.log(pageNumbers, pages);
+  for (let i = 1; i <= Math.ceil(totalPosts / accommodationsPerPage); i++) {
+    numberOfPages.push(i);
+  }
   return (
-    <ul>
-      {/* {pageNumbers.map((pageN) => (
-        <li key={pageN}>
-          <a href="!#" onClick={() => setCurrentPage(pageN)}>
-            {pageN}
-          </a>
-        </li>
-      ))} */}
-    </ul>
+    <nav className="wrapperNumber">
+      <ul>
+        {numberOfPages.map((number) => (
+          <li key={number}>
+            <NavLink to={"/"} onClick={() => paginate(number)}>
+              {number}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
