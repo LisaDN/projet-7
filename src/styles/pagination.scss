@@ -1,0 +1,16 @@
+.wrapperNumber {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  ul {
+    display: flex;
+    text-decoration: none;
+    li {
+      padding: 5px;
+      a.active {
+        text-decoration: none;
+      }
+    }
+  }
+}
