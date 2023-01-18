@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
       <Banner
         BannerImg={BannerImg}
-        BannerTitle="  Chez vous, partout et ailleurs"
+        BannerTitle="Chez vous, partout et ailleurs"
       />
       <main>
         <div className="wrapper card">
