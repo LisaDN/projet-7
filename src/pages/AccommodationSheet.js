@@ -12,7 +12,7 @@ import { Navigate } from "react-router-dom";
 export default function AccommodationSheet() {
   // récupération id dans l'url
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const accommodation = accommodationList.find(
     (accommodationData) => accommodationData.id === id
   );

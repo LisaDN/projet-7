@@ -24,7 +24,10 @@ export default function Home() {
     indexOfFirstAccommodation,
     indexOfLastAccommodation
   );
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div>
       <Header />
@@ -42,6 +45,7 @@ export default function Home() {
             accommodationsPerPage={accommodationsPerPage}
             totalPosts={accommodations.length}
             paginate={paginate}
+            currentPage={currentPage}
           />
         </div>
       </main>

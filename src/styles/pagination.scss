@@ -3,13 +3,22 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+
   ul {
     display: flex;
-    text-decoration: none;
+    background: #80808047;
+    border-radius: 20px;
+
     li {
-      padding: 5px;
-      a.active {
+      padding: 10px;
+
+      a {
         text-decoration: none;
+        color: grey;
+      }
+      .active {
+        color: white;
+        font-weight: bold;
       }
     }
   }

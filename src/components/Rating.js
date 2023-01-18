@@ -4,7 +4,7 @@ import starGrey from "../assets/starGrey.png";
 export default function Rating({ rating }) {
   const starRating = [];
   let starEmpty = true;
-  console.log(rating);
+  // console.log(rating);
 
   for (let i = 0; i < 5; i++) {
     if (i === parseInt(rating)) {
