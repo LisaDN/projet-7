@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Banner from "../components/Banner";
-import BannerAboutImg from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg";
+import BannerAboutImg from "../assets/kalen-emsley.jpg";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 
