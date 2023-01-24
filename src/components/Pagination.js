@@ -15,7 +15,7 @@ export default function Pagination({
 
   return (
     <nav className="wrapperNumber">
-      <ul>
+      <ul className="numberFlex">
         {numberOfPages.map((number) => (
           <li key={number}>
             <NavLink
