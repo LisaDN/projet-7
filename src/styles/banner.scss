@@ -5,6 +5,7 @@
   border-radius: 25px;
   height: 223px;
   margin-top: 50px;
+
   @media only screen and (max-width: 700px) {
     height: 111px;
   }
@@ -14,10 +15,12 @@
     border-radius: 25px;
     object-fit: cover;
     position: absolute;
+    object-position: right 40%;
     /*filtre noir transparent*/
     filter: brightness(0.6);
     @media only screen and (max-width: 700px) {
       border-radius: 10px;
+      object-position: right 70%;
     }
   }
   .banner_txt {
