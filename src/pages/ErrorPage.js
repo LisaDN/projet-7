@@ -12,9 +12,7 @@ export default function ErrorPage() {
           <NavLink to="/">Retourner sur la page d'accueil</NavLink>
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

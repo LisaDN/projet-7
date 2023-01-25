@@ -49,9 +49,7 @@ export default function Home() {
           />
         </div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
