@@ -72,9 +72,7 @@ export default function AccommodationSheet() {
               </section>
             </div>
           </main>
-          <footer>
-            <Footer />
-          </footer>
+          <Footer />
         </div>
       )}
     </div>
