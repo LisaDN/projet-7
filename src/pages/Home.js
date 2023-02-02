@@ -21,6 +21,7 @@ export default function Home() {
         BannerTitle="Chez vous, partout et ailleurs"
       />
       <main>
+        {/* affichage en liste avec la fonction map (boucle) des differents logement contenus fichier json */}
         <div className="wrapper card">
           {accommodations.map((accommodation) => (
             <Card key={accommodation.id} accommodation={accommodation} />

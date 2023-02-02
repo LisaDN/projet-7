@@ -20,6 +20,8 @@ export default function AccommodationSheet() {
 
   return (
     <div>
+      {/* mise en place condition ternaire si l'id du logement se trouvant dans les paramètres de l'url ne correspond à aucun logement se trouvant dans le 
+      fichier json alors redirection vers page erreur sinon affichage de la page logement */}
       {!accommodation ? (
         <Navigate to="not found" />
       ) : (
@@ -34,7 +36,7 @@ export default function AccommodationSheet() {
                   <div className="accommodationName">
                     <h1>{accommodation.title}</h1>
                     <h2>{accommodation.location}</h2>
-
+                    {/* mise en place boucle map pour affichage des differents tags */}
                     <div className="tagsAndNotation">
                       <ul>
                         {accommodation.tags.map((accommodationTags, index) => (
@@ -60,6 +62,7 @@ export default function AccommodationSheet() {
                   />
                   <Collapse
                     collapseTitle="Equipements"
+                    // mise en place boucle map pour affichage en liste des infos contenus collapse equipement
                     collapseInfo={accommodation.equipments.map(
                       (accommodationsEquipments) => (
                         <li key={accommodationsEquipments}>

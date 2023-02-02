@@ -3,6 +3,8 @@ import arrowRight from "../assets/chevron-droit.png";
 import arrowLeft from "../assets/chevron-gauche.png";
 
 export default function Carroussel({ pictures }) {
+  // stockage dans etat index actuel de la diapositive qui sera à 0
+  // stockage des images dans un tableau qui prend l'etat initiale et permettra d'afficher la 1ère image
   const [slide, setSlide] = useState(0);
   const currentSlide = pictures[slide];
   // console.log(slide);
@@ -18,6 +20,9 @@ export default function Carroussel({ pictures }) {
     const newSlide = firstSlide ? pictures.length - 1 : slide - 1;
     setSlide(newSlide);
   };
+  // mise en place défilement automatique Carroussel toutes les 3secondes
+  // incremente de 1 toute les 3s
+  //va permette une fois arriver à la fin du tableau de recommencer le défilement auto des images
   useEffect(() => {
     const interval = setInterval(() => {
       setSlide((slide + 1) % pictures.length);
