@@ -43,9 +43,13 @@ export default function Carroussel({ pictures }) {
       )}
 
       <div className="countSlides">
-        <p>
-          {[slide + 1]}/{[pictures.length]}
-        </p>
+        {pictures.length > 1 ? (
+          <p>
+            {[slide + 1]}/{[pictures.length]}
+          </p>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
