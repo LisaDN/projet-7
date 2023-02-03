@@ -22,7 +22,7 @@ export default function Carroussel({ pictures }) {
   };
   // mise en place défilement automatique Carroussel toutes les 3secondes
   // incremente de 1 toute les 3s
-  //va permette une fois arriver à la fin du tableau de recommencer le défilement auto des images
+  //% pictures.length va permette une fois arriver à la fin du tableau de recommencer le défilement auto des images
   useEffect(() => {
     const interval = setInterval(() => {
       setSlide((slide + 1) % pictures.length);
@@ -48,9 +48,13 @@ export default function Carroussel({ pictures }) {
       )}
 
       <div className="countSlides">
-        <p>
-          {[slide + 1]}/{[pictures.length]}
-        </p>
+        {pictures.length > 1 ? (
+          <p>
+            {[slide + 1]}/{[pictures.length]}
+          </p>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
